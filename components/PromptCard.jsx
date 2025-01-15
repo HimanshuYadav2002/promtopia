@@ -62,13 +62,15 @@ const PromptCard = ({ post, handelTagClick, handleEdit, handleDelete }) => {
         <div className="mt-5 flex-center gap-4 border-t border-gray-100 pt-3">
           <p
             className="font-inter text-sm green_gradient cursor-pointer"
-            onClick={handleEdit}
+            // onClick={handleEdit}
+            onClick={()=>{handleEdit && handleEdit(post)}}
           >
             Edit
           </p>
           <p
             className="font-inter text-sm green_gradient cursor-pointer"
-            onClick={handleDelete}
+            // onClick={handleDelete}
+            onClick={()=>{handleDelete && handleDelete(post)}}
           >
             Delete
           </p>
